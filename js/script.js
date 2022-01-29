@@ -1,5 +1,5 @@
 'use strict';
-const APIKEY = '4b8998667e9d1f81c27406c1e56ef90d';
+const APIKEY = '';
 const CITY = 'Vilnius';
 
 // api test
