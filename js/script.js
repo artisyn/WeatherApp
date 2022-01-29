@@ -1,6 +1,5 @@
 'use strict';
-const APIKEY = '';
-const CITY = 'Vilnius';
+import { APIKEY } from './settings.js';
 const dateDisplay = document.querySelector('.userInfo__date');
 
 // api test
@@ -20,9 +19,9 @@ const getWeatherData = async (apiKey, cityName) => {
 };
 
 getWeatherData(APIKEY, 'london').then((data) => console.log(data));
-
+let dateInterval;
 const showDateAndTime = () => {
-  setInterval(() => {
+  dateInterval = setInterval(() => {
     let today = new Intl.DateTimeFormat('lt', {
       timeStyle: 'medium',
       dateStyle: 'long', //short, long
@@ -31,4 +30,6 @@ const showDateAndTime = () => {
     dateDisplay.innerText = today;
   }, 1000);
 };
-let dateTimeout = showDateAndTime();
+showDateAndTime();
+
+clearInterval(dateInterval);
