@@ -6,7 +6,30 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./css/style.css" />
 		<script src="./js/script.js" defer></script>
-		<title>Template</title>
+		<title>Weather App</title>
 	</head>
-	<body></body>
+	<body>
+		<div class="container">
+			<header class="userInfo">
+				<div class="userInfo__title">
+					<h1>
+						Hello
+						<span class="userInfo__Title--username">user</span> ,
+						check the Weather, be prepared 🙂
+					</h1>
+				</div>
+
+				<div class="userInfo__date">The date is:</div>
+			</header>
+			<section userControls>
+				<input class="userControls__search" type="text" name="" id="" />
+			</section>
+			<main class="mainInfo">
+				<div class="mainInfo__degrees">-11 &deg</div>
+				<h2 class="mainInfo__weatherType">Snowing heavily</h2>
+				<div class="mainInfo__diagram">Diagram here...</div>
+			</main>
+			<footer>Forecast for next 3 days</footer>
+		</div>
+	</body>
 </html>
