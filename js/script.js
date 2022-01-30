@@ -18,7 +18,7 @@ const getWeatherData = async (apiKey, cityName) => {
   }
 };
 
-getWeatherData(APIKEY, 'london').then((data) => console.log(data));
+// getWeatherData(APIKEY, 'london').then((data) => console.log(data));
 let dateInterval;
 const showDateAndTime = () => {
   dateInterval = setInterval(() => {
@@ -30,6 +30,6 @@ const showDateAndTime = () => {
     dateDisplay.innerText = today;
   }, 1000);
 };
-showDateAndTime();
+// showDateAndTime();
 
-clearInterval(dateInterval);
+// clearInterval(dateInterval);

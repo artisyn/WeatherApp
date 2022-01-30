@@ -4,32 +4,54 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,100&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="./css/style.css" />
 		<script type="module" src="./js/script.js" defer></script>
 		<title>Weather App</title>
 	</head>
 	<body>
 		<div class="container">
-			<header class="userInfo">
-				<div class="userInfo__title">
-					<h1>
-						Hello
-						<span class="userInfo__Title--username">user</span> ,
-						check the Weather, be prepared 🙂
-					</h1>
+			<div class="main">
+				<nav>
+					<form class="searchForm">
+						<input type="text" class="searchBar" id="" />
+						<button class="btn btnSearch" type="submit">
+							search
+						</button>
+					</form>
+					<label class="burgerLabel" for="burgerCheck">
+						<input
+							class="burgerInput"
+							type="checkbox"
+							name=""
+							id="burgerCheck"
+						/>
+						<span class="bar1"></span>
+					</label>
+				</nav>
+				<div class="weatherInfo">
+					IT'S <br />
+					RAINING <br />
+					NOW
 				</div>
-
-				<div class="userInfo__date">The date is:</div>
-			</header>
-			<section userControls>
-				<input class="userControls__search" type="text" name="" id="" />
-			</section>
-			<main class="mainInfo">
-				<div class="mainInfo__degrees">-11 &deg</div>
-				<h2 class="mainInfo__weatherType">Snowing heavily</h2>
-				<div class="mainInfo__diagram">Diagram here...</div>
-			</main>
-			<footer>Forecast for next 3 days</footer>
+				<div class="town">Beijing</div>
+				<div class="time">MON 20:31</div>
+			</div>
+			<footer>
+				<input
+					type="range"
+					class="degRange"
+					minlength="-40"
+					maxlength="40"
+					id=""
+					disabled
+				/>
+			</footer>
 		</div>
 	</body>
 </html>
