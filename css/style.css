@@ -103,9 +103,12 @@ nav {
 }
 .burgerInput:checked ~ .bar1::before {
 	background-color: white;
+	transform: translate(15px, 25px) rotate(120deg);
 }
 .burgerInput:checked ~ .bar1::after {
 	background-color: white;
+
+	transform: translate(-15px, -25px) rotate(60deg);
 }
 
 /* burger menu end */
