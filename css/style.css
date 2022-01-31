@@ -12,6 +12,7 @@
 	--container-color2: rgb(235, 195, 201);
 	--burger-color1: rgb(79, 163, 66);
 	--burger-color-after1: rgb(108, 209, 92);
+	--rain-color1: rgb(134, 185, 227);
 }
 
 html,
@@ -216,4 +217,538 @@ footer {
 	/* border: 3px solid white; */
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+.svgIcon {
+	/* background-color: white;
+	 */
+	color: #ffffff;
+}
+
+.polygon1 {
+	position: absolute;
+	width: 150px;
+	height: 150px;
+
+	background: #c4c4c4;
+}
+.polygon2 {
+	position: absolute;
+	width: 150px;
+	height: 150px;
+
+	background: #c4c4c4;
+	transform: rotate(45deg);
+}
+.test {
+	/* Polygon 1 */
+
+	position: absolute;
+	width: 150px;
+	height: 150px;
+
+	background: #c4c4c4;
+
+	/* Polygon 2 */
+
+	position: absolute;
+	width: 150px;
+	height: 150px;
+
+	background: #c4c4c4;
+	transform: rotate(60.5deg);
+}
+
+.sun {
+	/* Ellipse 1 */
+
+	position: absolute;
+	width: 287px;
+	height: 287px;
+
+	background: #fae8aa;
+}
+
+.clouds {
+	/* Rectangle 1 */
+
+	position: absolute;
+	width: 250px;
+	height: 100px;
+
+	background: #de838f;
+	border-radius: 50px;
+
+	/* Rectangle 2 */
+
+	position: absolute;
+	width: 250px;
+	height: 100px;
+
+	background: #87bed1;
+	border-radius: 50px;
+}
+
+.sunAndClouds {
+	/* Ellipse 1 */
+
+	position: absolute;
+	width: 287px;
+	height: 287px;
+
+	background: #fae8aa;
+
+	/* Rectangle 1 */
+
+	position: absolute;
+	width: 250px;
+	height: 100px;
+
+	background: rgb(223, 131, 142, 0.8);
+	border-radius: 50px;
+
+	/* Rectangle 2 */
+
+	position: absolute;
+	width: 250px;
+	height: 100px;
+
+	background: rgb(135, 190, 209, 0.8);
+	border-radius: 50px;
+}
+
+.cloudsAndRain {
+	/* Rectangle 1 */
+
+	position: absolute;
+	width: 250px;
+	height: 100px;
+	background: #de838f;
+	border-radius: 50px;
+
+	/* Rectangle 2 */
+
+	position: absolute;
+	width: 250px;
+	height: 100px;
+	background: rgb(120, 170, 170);
+	border-radius: 50px;
+
+	/* Ellipse 1 */
+
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background: var(--rain-color1);
+
+	/* Ellipse 15 */
+
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background: var(--rain-color1);
+
+	/* Ellipse 14 */
+
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background: var(--rain-color1);
+
+	/* Ellipse 13 */
+
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background: var(--rain-color1);
+
+	/* Ellipse 12 */
+
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background: var(--rain-color1);
+
+	/* Ellipse 11 */
+
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background: var(--rain-color1);
+
+	/* Ellipse 10 */
+
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background: var(--rain-color1);
+
+	/* Ellipse 9 */
+
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background: var(--rain-color1);
+
+	/* Ellipse 8 */
+
+	position: absolute;
+	width: 25px;
+	height: 25px;
+
+	background: var(--rain-color1);
+
+	/* Ellipse 7 */
+
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background: var(--rain-color1);
+
+	/* Ellipse 6 */
+
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background: var(--rain-color1);
+
+	/* Ellipse 5 */
+
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background: var(--rain-color1);
+
+	/* Ellipse 4 */
+
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background: var(--rain-color1);
+
+	/* Ellipse 3 */
+
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background: var(--rain-color1);
+
+	/* Ellipse 2 */
+
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background: var(--rain-color1);
+}
+
+.cloudsRainAndThunder {
+	/* Rectangle 1 */
+
+	position: absolute;
+	width: 250px;
+	height: 100px;
+
+	background: #de838f;
+	border-radius: 50px;
+
+	/* Rectangle 2 */
+
+	position: absolute;
+	width: 250px;
+	height: 100px;
+
+	background: #87bed1;
+	border-radius: 50px;
+
+	/* Ellipse 1 */
+
+	position: absolute;
+	width: 25px;
+	height: 25px;
+
+	background: #86b9e3;
+
+	/* Ellipse 15 */
+
+	position: absolute;
+	width: 25px;
+	height: 25px;
+
+	background: #86b9e3;
+
+	/* Ellipse 14 */
+
+	position: absolute;
+	width: 25px;
+	height: 25px;
+
+	background: #86b9e3;
+
+	/* Ellipse 13 */
+
+	position: absolute;
+	width: 25px;
+	height: 25px;
+
+	background: #86b9e3;
+
+	/* Ellipse 12 */
+
+	position: absolute;
+	width: 25px;
+	height: 25px;
+
+	background: #86b9e3;
+
+	/* Ellipse 11 */
+
+	position: absolute;
+	width: 25px;
+	height: 25px;
+
+	background: #86b9e3;
+
+	/* Ellipse 10 */
+
+	position: absolute;
+	width: 25px;
+	height: 25px;
+
+	background: #86b9e3;
+
+	/* Ellipse 9 */
+
+	position: absolute;
+	width: 25px;
+	height: 25px;
+
+	background: #86b9e3;
+
+	/* Ellipse 8 */
+
+	position: absolute;
+	width: 25px;
+	height: 25px;
+
+	background: #86b9e3;
+
+	/* Ellipse 7 */
+
+	position: absolute;
+	width: 25px;
+	height: 25px;
+
+	background: #86b9e3;
+
+	/* Ellipse 6 */
+
+	position: absolute;
+	width: 25px;
+	height: 25px;
+
+	background: #86b9e3;
+
+	/* Ellipse 5 */
+
+	position: absolute;
+	width: 25px;
+	height: 25px;
+
+	background: #86b9e3;
+
+	/* Ellipse 4 */
+
+	position: absolute;
+	width: 25px;
+	height: 25px;
+
+	background: #86b9e3;
+
+	/* Ellipse 3 */
+
+	position: absolute;
+	width: 25px;
+	height: 25px;
+
+	background: #86b9e3;
+
+	/* Ellipse 2 */
+
+	position: absolute;
+	width: 25px;
+	height: 25px;
+
+	background: #86b9e3;
+
+	/* Polygon 1 */
+
+	position: absolute;
+	width: 70px;
+	height: 40px;
+
+	background: #dcd16a;
+	transform: rotate(-44deg);
+
+	/* Polygon 2 */
+
+	position: absolute;
+	width: 70px;
+	height: 40px;
+
+	background: #dcd16a;
+	transform: rotate(144deg);
+}
+
+.cloudsAndSnow {
+	/* Rectangle 1 */
+
+	position: absolute;
+	width: 250px;
+	height: 100px;
+
+	background: #de838f;
+	border-radius: 50px;
+
+	/* Rectangle 2 */
+
+	position: absolute;
+	width: 250px;
+	height: 100px;
+
+	background: #87bed1;
+	border-radius: 50px;
+
+	/* Polygon 29 */
+
+	position: absolute;
+	width: 22.98px;
+	height: 45.73px;
+
+	background: #97bbf1;
+	transform: matrix(0.13, 0.99, -0.99, 0.12, 0, 0);
+
+	/* Polygon 30 */
+
+	position: absolute;
+	width: 22.99px;
+	height: 45.7px;
+
+	background: #97bbf1;
+	transform: matrix(0.79, 0.61, -0.61, 0.79, 0, 0);
+
+	/* Polygon 31 */
+
+	position: absolute;
+	width: 22.92px;
+	height: 45.84px;
+
+	background: #97bbf1;
+	transform: matrix(-0.13, 0.99, -0.99, -0.14, 0, 0);
+
+	/* Polygon 32 */
+
+	position: absolute;
+	width: 22.89px;
+	height: 45.91px;
+
+	background: #97bbf1;
+	transform: matrix(-1, 0.03, -0.04, -1, 0, 0);
+
+	/* Polygon 33 */
+
+	position: absolute;
+	width: 22.85px;
+	height: 45.98px;
+
+	background: #97bbf1;
+	transform: matrix(-0.84, 0.54, -0.54, -0.84, 0, 0);
+
+	/* Polygon 34 */
+
+	position: absolute;
+	width: 22.98px;
+	height: 45.73px;
+
+	background: #97bbf1;
+	transform: matrix(0.13, 0.99, -0.99, 0.12, 0, 0);
+
+	/* Polygon 35 */
+
+	position: absolute;
+	width: 22.99px;
+	height: 45.7px;
+
+	background: #97bbf1;
+	transform: matrix(0.79, 0.61, -0.61, 0.79, 0, 0);
+
+	/* Polygon 36 */
+
+	position: absolute;
+	width: 22.92px;
+	height: 45.84px;
+
+	background: #97bbf1;
+	transform: matrix(-0.13, 0.99, -0.99, -0.14, 0, 0);
+
+	/* Polygon 37 */
+
+	position: absolute;
+	width: 22.89px;
+	height: 45.91px;
+
+	background: #97bbf1;
+	transform: matrix(-1, 0.03, -0.04, -1, 0, 0);
+
+	/* Polygon 38 */
+
+	position: absolute;
+	width: 22.85px;
+	height: 45.98px;
+
+	background: #97bbf1;
+	transform: matrix(-0.84, 0.54, -0.54, -0.84, 0, 0);
+
+	/* Polygon 39 */
+
+	position: absolute;
+	width: 22.98px;
+	height: 45.73px;
+
+	background: #97bbf1;
+	transform: matrix(0.13, 0.99, -0.99, 0.12, 0, 0);
+
+	/* Polygon 40 */
+
+	position: absolute;
+	width: 22.99px;
+	height: 45.7px;
+
+	background: #97bbf1;
+	transform: matrix(0.79, 0.61, -0.61, 0.79, 0, 0);
+
+	/* Polygon 41 */
+
+	position: absolute;
+	width: 22.92px;
+	height: 45.84px;
+
+	background: #97bbf1;
+	transform: matrix(-0.13, 0.99, -0.99, -0.14, 0, 0);
+
+	/* Polygon 42 */
+
+	position: absolute;
+	width: 22.89px;
+	height: 45.91px;
+
+	background: #97bbf1;
+	transform: matrix(-1, 0.03, -0.04, -1, 0, 0);
+
+	/* Polygon 43 */
+
+	position: absolute;
+	width: 22.85px;
+	height: 45.98px;
+
+	background: #97bbf1;
+	transform: matrix(-0.84, 0.54, -0.54, -0.84, 0, 0);
 }
