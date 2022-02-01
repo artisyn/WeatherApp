@@ -13,6 +13,9 @@
 	--burger-color1: rgb(79, 163, 66);
 	--burger-color-after1: rgb(108, 209, 92);
 	--rain-color1: rgb(134, 185, 227);
+	--sun-color1: rgb(246, 232, 174, 0.9);
+	--cloud-left1: rgb(223, 131, 142, 0.8);
+	--cloud-right1: rgb(135, 190, 209, 0.8);
 }
 
 html,
@@ -40,6 +43,7 @@ body {
 
 .main {
 	padding: 1rem;
+	position: relative;
 }
 nav {
 	/* border: 1px solid white; */
@@ -159,16 +163,22 @@ nav {
 	color: var(--burger-color1);
 }
 .weatherInfo {
+	position: relative;
 	font-size: 4rem;
 	font-weight: bold;
+	z-index: 10;
 }
 .town {
+	position: relative;
 	font-size: 1.4rem;
 	font-weight: bold;
 	letter-spacing: 3px;
+	z-index: 10;
 }
 .time {
+	position: relative;
 	font-size: 1rem;
+	z-index: 10;
 }
 footer {
 	background-color: rgb(255, 255, 255);
@@ -211,233 +221,166 @@ footer {
 }
 
 .weatherIcon {
-	margin: 0 auto;
-	width: 150px;
-	height: 150px;
-	/* border: 3px solid white; */
+	width: 300px;
+	height: 300px;
+	border: 1px solid white;
 	background-repeat: no-repeat;
 	background-size: cover;
-}
-.svgIcon {
-	/* background-color: white;
-	 */
-	color: #ffffff;
-}
-
-.polygon1 {
 	position: absolute;
-	width: 150px;
-	height: 150px;
-
-	background: #c4c4c4;
-}
-.polygon2 {
-	position: absolute;
-	width: 150px;
-	height: 150px;
-
-	background: #c4c4c4;
-	transform: rotate(45deg);
-}
-.test {
-	/* Polygon 1 */
-
-	position: absolute;
-	width: 150px;
-	height: 150px;
-
-	background: #c4c4c4;
-
-	/* Polygon 2 */
-
-	position: absolute;
-	width: 150px;
-	height: 150px;
-
-	background: #c4c4c4;
-	transform: rotate(60.5deg);
+	top: 30%;
+	left: 25%;
+	z-index: 8;
 }
 
 .sun {
 	/* Ellipse 1 */
 
-	position: absolute;
-	width: 287px;
-	height: 287px;
+	/* position: absolute; */
+	width: 220px;
+	height: 220px;
 
-	background: #fae8aa;
+	background: var(--sun-color1);
+	border-radius: 50%;
+	z-index: 5;
+}
+.cloudLeft {
+	position: absolute;
+	width: 250px;
+	height: 100px;
+	background: var(--cloud-left1);
+	border-radius: 50px;
+	bottom: 26%;
+	left: -25%;
+}
+.cloudRight {
+	position: absolute;
+	width: 250px;
+	height: 100px;
+	background: var(--cloud-right1);
+	border-radius: 50px;
+	bottom: 5%;
+	left: 15%;
 }
 
-.clouds {
-	/* Rectangle 1 */
-
+.rain1 {
 	position: absolute;
-	width: 250px;
-	height: 100px;
-
-	background: #de838f;
-	border-radius: 50px;
-
-	/* Rectangle 2 */
-
-	position: absolute;
-	width: 250px;
-	height: 100px;
-
-	background: #87bed1;
-	border-radius: 50px;
+	width: 25px;
+	height: 25px;
+	background: var(--rain-color1);
+	border-radius: 50%;
+	bottom: 0%;
 }
-
-.sunAndClouds {
-	/* Ellipse 1 */
-
+.rain2 {
 	position: absolute;
-	width: 287px;
-	height: 287px;
-
-	background: #fae8aa;
-
-	/* Rectangle 1 */
-
-	position: absolute;
-	width: 250px;
-	height: 100px;
-
-	background: rgb(223, 131, 142, 0.8);
-	border-radius: 50px;
-
-	/* Rectangle 2 */
-
-	position: absolute;
-	width: 250px;
-	height: 100px;
-
-	background: rgb(135, 190, 209, 0.8);
-	border-radius: 50px;
+	width: 25px;
+	height: 25px;
+	background: var(--rain-color1);
+	border-radius: 50%;
+	bottom: 0%;
 }
-
-.cloudsAndRain {
-	/* Rectangle 1 */
-
-	position: absolute;
-	width: 250px;
-	height: 100px;
-	background: #de838f;
-	border-radius: 50px;
-
-	/* Rectangle 2 */
-
-	position: absolute;
-	width: 250px;
-	height: 100px;
-	background: rgb(120, 170, 170);
-	border-radius: 50px;
-
-	/* Ellipse 1 */
-
+.rain3 {
 	position: absolute;
 	width: 25px;
 	height: 25px;
 	background: var(--rain-color1);
-
-	/* Ellipse 15 */
-
+	border-radius: 50%;
+	bottom: 0%;
+}
+.rain4 {
 	position: absolute;
 	width: 25px;
 	height: 25px;
 	background: var(--rain-color1);
-
-	/* Ellipse 14 */
-
+	border-radius: 50%;
+	bottom: 0%;
+}
+.rain5 {
 	position: absolute;
 	width: 25px;
 	height: 25px;
 	background: var(--rain-color1);
-
-	/* Ellipse 13 */
-
+	border-radius: 50%;
+	bottom: 0%;
+}
+.rain6 {
 	position: absolute;
 	width: 25px;
 	height: 25px;
 	background: var(--rain-color1);
-
-	/* Ellipse 12 */
-
+	border-radius: 50%;
+	bottom: 0%;
+}
+.rain7 {
 	position: absolute;
 	width: 25px;
 	height: 25px;
 	background: var(--rain-color1);
-
-	/* Ellipse 11 */
-
+	border-radius: 50%;
+	bottom: 0%;
+}
+.rain8 {
 	position: absolute;
 	width: 25px;
 	height: 25px;
 	background: var(--rain-color1);
-
-	/* Ellipse 10 */
-
+	border-radius: 50%;
+	bottom: 0%;
+}
+.rain9 {
 	position: absolute;
 	width: 25px;
 	height: 25px;
 	background: var(--rain-color1);
-
-	/* Ellipse 9 */
-
+	border-radius: 50%;
+	bottom: 0%;
+}
+.rain10 {
 	position: absolute;
 	width: 25px;
 	height: 25px;
 	background: var(--rain-color1);
-
-	/* Ellipse 8 */
-
-	position: absolute;
-	width: 25px;
-	height: 25px;
-
-	background: var(--rain-color1);
-
-	/* Ellipse 7 */
-
+	border-radius: 50%;
+	bottom: 0%;
+}
+.rain11 {
 	position: absolute;
 	width: 25px;
 	height: 25px;
 	background: var(--rain-color1);
-
-	/* Ellipse 6 */
-
+	border-radius: 50%;
+	bottom: 0%;
+}
+.rain12 {
 	position: absolute;
 	width: 25px;
 	height: 25px;
 	background: var(--rain-color1);
-
-	/* Ellipse 5 */
-
+	border-radius: 50%;
+	bottom: 0%;
+}
+.rain13 {
 	position: absolute;
 	width: 25px;
 	height: 25px;
 	background: var(--rain-color1);
-
-	/* Ellipse 4 */
-
+	border-radius: 50%;
+	bottom: 0%;
+}
+.rain14 {
 	position: absolute;
 	width: 25px;
 	height: 25px;
 	background: var(--rain-color1);
-
-	/* Ellipse 3 */
-
+	border-radius: 50%;
+	bottom: 0%;
+}
+.rain15 {
 	position: absolute;
 	width: 25px;
 	height: 25px;
 	background: var(--rain-color1);
-
-	/* Ellipse 2 */
-
-	position: absolute;
-	width: 25px;
-	height: 25px;
-	background: var(--rain-color1);
+	border-radius: 50%;
+	bottom: 0%;
 }
 
 .cloudsRainAndThunder {

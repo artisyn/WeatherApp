@@ -85,4 +85,54 @@ btnSearch.addEventListener('click', (e) => {
   getWeatherData(APIKEY, userInput);
 });
 
+const createSun = () => {
+  weatherIcon.innerHTML = '';
+  const div1 = document.createElement('div');
+  div1.classList.add('sun');
+  weatherIcon.appendChild(div1);
+};
+
+// createSun();
+
+const createClouds = () => {
+  weatherIcon.innerHTML = '';
+  const div2 = document.createElement('div');
+  div2.classList.add('cloudLeft');
+  weatherIcon.appendChild(div2);
+  const div3 = document.createElement('div');
+  div3.classList.add('cloudRight');
+  weatherIcon.appendChild(div3);
+};
+// createClouds();
+
+const createSunAndClouds = () => {
+  weatherIcon.innerHTML = '';
+  const div1 = document.createElement('div');
+  div1.classList.add('sun');
+  weatherIcon.appendChild(div1);
+  const div2 = document.createElement('div');
+  div2.classList.add('cloudLeft');
+  weatherIcon.appendChild(div2);
+  const div3 = document.createElement('div');
+  div3.classList.add('cloudRight');
+  weatherIcon.appendChild(div3);
+};
+// createSunAndClouds();
+
+const createCloudsAndRain = () => {
+  weatherIcon.innerHTML = '';
+  const div2 = document.createElement('div');
+  div2.classList.add('cloudLeft');
+  weatherIcon.appendChild(div2);
+  const div3 = document.createElement('div');
+  div3.classList.add('cloudRight');
+  weatherIcon.appendChild(div3);
+  for (let i = 0; i < 15; i++) {
+    const div = document.createElement('div');
+    div.classList.add(`rain${i + 1}`);
+    weatherIcon.appendChild(div);
+  }
+};
+createCloudsAndRain();
+
 // TODO Implement degrees range, create css or svg icons
