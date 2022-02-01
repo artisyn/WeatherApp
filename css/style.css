@@ -227,7 +227,7 @@ footer {
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: absolute;
-	top: 30%;
+	top: 20%;
 	left: 25%;
 	z-index: 8;
 }
@@ -264,124 +264,130 @@ footer {
 
 .rain1 {
 	position: absolute;
-	width: 25px;
-	height: 25px;
+	width: 20px;
+	height: 20px;
 	background: var(--rain-color1);
 	border-radius: 50%;
 	bottom: 0%;
 }
 .rain2 {
 	position: absolute;
-	width: 25px;
-	height: 25px;
+	width: 20px;
+	height: 20px;
 	background: var(--rain-color1);
 	border-radius: 50%;
 	bottom: 0%;
+	left: 25%;
 }
 .rain3 {
 	position: absolute;
-	width: 25px;
-	height: 25px;
+	width: 20px;
+	height: 20px;
 	background: var(--rain-color1);
 	border-radius: 50%;
 	bottom: 0%;
+	left: 50%;
 }
 .rain4 {
 	position: absolute;
-	width: 25px;
-	height: 25px;
+	width: 20px;
+	height: 20px;
 	background: var(--rain-color1);
 	border-radius: 50%;
 	bottom: 0%;
+	left: 75%;
 }
 .rain5 {
 	position: absolute;
-	width: 25px;
-	height: 25px;
+	width: 20px;
+	height: 20px;
 	background: var(--rain-color1);
 	border-radius: 50%;
-	bottom: 0%;
+	bottom: -20%;
 }
 .rain6 {
 	position: absolute;
-	width: 25px;
-	height: 25px;
+	width: 20px;
+	height: 20px;
 	background: var(--rain-color1);
 	border-radius: 50%;
-	bottom: 0%;
+	bottom: -20%;
+	left: 25%;
 }
 .rain7 {
 	position: absolute;
-	width: 25px;
-	height: 25px;
+	width: 20px;
+	height: 20px;
 	background: var(--rain-color1);
 	border-radius: 50%;
-	bottom: 0%;
+	bottom: -20%;
+	left: 50%;
 }
 .rain8 {
 	position: absolute;
-	width: 25px;
-	height: 25px;
+	width: 20px;
+	height: 20px;
 	background: var(--rain-color1);
 	border-radius: 50%;
-	bottom: 0%;
+	bottom: -20%;
+	left: 75%;
 }
-.rain9 {
+/* .rain9 {
 	position: absolute;
-	width: 25px;
-	height: 25px;
+	width: 20px;
+	height: 20px;
 	background: var(--rain-color1);
 	border-radius: 50%;
-	bottom: 0%;
+	bottom: -40%;
 }
 .rain10 {
 	position: absolute;
-	width: 25px;
-	height: 25px;
+	width: 20px;
+	height: 20px;
 	background: var(--rain-color1);
 	border-radius: 50%;
 	bottom: 0%;
 }
 .rain11 {
 	position: absolute;
-	width: 25px;
-	height: 25px;
+	width: 20px;
+	height: 20px;
 	background: var(--rain-color1);
 	border-radius: 50%;
 	bottom: 0%;
 }
 .rain12 {
 	position: absolute;
-	width: 25px;
-	height: 25px;
+	width: 20px;
+	height: 20px;
 	background: var(--rain-color1);
 	border-radius: 50%;
 	bottom: 0%;
 }
 .rain13 {
 	position: absolute;
-	width: 25px;
-	height: 25px;
+	width: 20px;
+	height: 20px;
 	background: var(--rain-color1);
 	border-radius: 50%;
 	bottom: 0%;
 }
 .rain14 {
 	position: absolute;
-	width: 25px;
-	height: 25px;
+	width: 20px;
+	height: 20px;
 	background: var(--rain-color1);
 	border-radius: 50%;
 	bottom: 0%;
 }
 .rain15 {
 	position: absolute;
-	width: 25px;
-	height: 25px;
+	width: 20px;
+	height: 20px;
 	background: var(--rain-color1);
 	border-radius: 50%;
 	bottom: 0%;
-}
+} */
 
 .cloudsRainAndThunder {
 	/* Rectangle 1 */

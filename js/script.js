@@ -127,7 +127,7 @@ const createCloudsAndRain = () => {
   const div3 = document.createElement('div');
   div3.classList.add('cloudRight');
   weatherIcon.appendChild(div3);
-  for (let i = 0; i < 15; i++) {
+  for (let i = 0; i < 8; i++) {
     const div = document.createElement('div');
     div.classList.add(`rain${i + 1}`);
     weatherIcon.appendChild(div);
