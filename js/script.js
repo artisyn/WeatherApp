@@ -9,6 +9,7 @@ const weatherInfo = document.querySelector('.weatherInfo');
 const townInfo = document.querySelector('.town');
 const dateTimeInfo = document.querySelector('.time');
 const weatherIcon = document.querySelector('.weatherIcon');
+const snowIncon = document.querySelector('.snowIcon');
 
 // time offset function
 const offsetDate = (offset) => {
@@ -45,6 +46,11 @@ const updateHtml = (apiData, dateObj) => {
     ' : ' +
     `${+dateObj.minutes}`.padStart(2, 0);
   weatherIcon.style.backgroundImage = `url('${iconUrl}')`;
+};
+
+const clearIconField = () => {
+  snowIncon.classList.add('displayNone');
+  weatherIcon.innerHTML = '';
 };
 
 // Burger menu functionality
@@ -95,7 +101,7 @@ const createSun = () => {
 // createSun();
 
 const createClouds = () => {
-  weatherIcon.innerHTML = '';
+  clearIconField();
   const div2 = document.createElement('div');
   div2.classList.add('cloudLeft');
   weatherIcon.appendChild(div2);
@@ -106,7 +112,7 @@ const createClouds = () => {
 // createClouds();
 
 const createSunAndClouds = () => {
-  weatherIcon.innerHTML = '';
+  clearIconField();
   const div1 = document.createElement('div');
   div1.classList.add('sun');
   weatherIcon.appendChild(div1);
@@ -120,7 +126,7 @@ const createSunAndClouds = () => {
 // createSunAndClouds();
 
 const createCloudsAndRain = () => {
-  weatherIcon.innerHTML = '';
+  clearIconField();
   const div2 = document.createElement('div');
   div2.classList.add('cloudLeft');
   weatherIcon.appendChild(div2);
@@ -133,6 +139,43 @@ const createCloudsAndRain = () => {
     weatherIcon.appendChild(div);
   }
 };
-createCloudsAndRain();
+// createCloudsAndRain();
+
+const cloudsRainAndThunder = () => {
+  clearIconField();
+
+  const div2 = document.createElement('div');
+  div2.classList.add('cloudLeft');
+  weatherIcon.appendChild(div2);
+  const div3 = document.createElement('div');
+  div3.classList.add('cloudRight');
+  weatherIcon.appendChild(div3);
+  for (let i = 0; i < 8; i++) {
+    const div = document.createElement('div');
+    div.classList.add(`rain${i + 1}`);
+    weatherIcon.appendChild(div);
+  }
+  const div9 = document.createElement('div');
+  div9.classList.add('thunder1');
+  weatherIcon.appendChild(div9);
+  const div10 = document.createElement('div');
+  div10.classList.add('thunder2');
+  weatherIcon.appendChild(div10);
+};
+
+// cloudsRainAndThunder();
+
+const cloudsAndSnow = () => {
+  clearIconField();
+  const div2 = document.createElement('div');
+  div2.classList.add('cloudLeft');
+  weatherIcon.appendChild(div2);
+  const div3 = document.createElement('div');
+  div3.classList.add('cloudRight');
+  weatherIcon.appendChild(div3);
+  snowIncon.classList.remove('displayNone');
+};
+
+cloudsAndSnow();
 
 // TODO Implement degrees range, create css or svg icons

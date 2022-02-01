@@ -16,6 +16,7 @@
 	--sun-color1: rgb(246, 232, 174, 0.9);
 	--cloud-left1: rgb(223, 131, 142, 0.8);
 	--cloud-right1: rgb(135, 190, 209, 0.8);
+	--thunder-color1: rgb(218, 208, 115, 1);
 }
 
 html,
@@ -223,7 +224,7 @@ footer {
 .weatherIcon {
 	width: 300px;
 	height: 300px;
-	border: 1px solid white;
+	/* border: 1px solid white; */
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: absolute;
@@ -332,372 +333,34 @@ footer {
 	bottom: -20%;
 	left: 75%;
 }
-/* .rain9 {
+.thunder1 {
 	position: absolute;
-	width: 20px;
-	height: 20px;
-	background: var(--rain-color1);
-	border-radius: 50%;
-	bottom: -40%;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 30px solid var(--thunder-color1);
+	transform: rotate(-160deg);
+	right: 0%;
+	top: 35%;
 }
-.rain10 {
+.thunder2 {
 	position: absolute;
-	width: 20px;
-	height: 20px;
-	background: var(--rain-color1);
-	border-radius: 50%;
-	bottom: 0%;
-}
-.rain11 {
-	position: absolute;
-	width: 20px;
-	height: 20px;
-	background: var(--rain-color1);
-	border-radius: 50%;
-	bottom: 0%;
-}
-.rain12 {
-	position: absolute;
-	width: 20px;
-	height: 20px;
-	background: var(--rain-color1);
-	border-radius: 50%;
-	bottom: 0%;
-}
-.rain13 {
-	position: absolute;
-	width: 20px;
-	height: 20px;
-	background: var(--rain-color1);
-	border-radius: 50%;
-	bottom: 0%;
-}
-.rain14 {
-	position: absolute;
-	width: 20px;
-	height: 20px;
-	background: var(--rain-color1);
-	border-radius: 50%;
-	bottom: 0%;
-}
-.rain15 {
-	position: absolute;
-	width: 20px;
-	height: 20px;
-	background: var(--rain-color1);
-	border-radius: 50%;
-	bottom: 0%;
-} */
-
-.cloudsRainAndThunder {
-	/* Rectangle 1 */
-
-	position: absolute;
-	width: 250px;
-	height: 100px;
-
-	background: #de838f;
-	border-radius: 50px;
-
-	/* Rectangle 2 */
-
-	position: absolute;
-	width: 250px;
-	height: 100px;
-
-	background: #87bed1;
-	border-radius: 50px;
-
-	/* Ellipse 1 */
-
-	position: absolute;
-	width: 25px;
-	height: 25px;
-
-	background: #86b9e3;
-
-	/* Ellipse 15 */
-
-	position: absolute;
-	width: 25px;
-	height: 25px;
-
-	background: #86b9e3;
-
-	/* Ellipse 14 */
-
-	position: absolute;
-	width: 25px;
-	height: 25px;
-
-	background: #86b9e3;
-
-	/* Ellipse 13 */
-
-	position: absolute;
-	width: 25px;
-	height: 25px;
-
-	background: #86b9e3;
-
-	/* Ellipse 12 */
-
-	position: absolute;
-	width: 25px;
-	height: 25px;
-
-	background: #86b9e3;
-
-	/* Ellipse 11 */
-
-	position: absolute;
-	width: 25px;
-	height: 25px;
-
-	background: #86b9e3;
-
-	/* Ellipse 10 */
-
-	position: absolute;
-	width: 25px;
-	height: 25px;
-
-	background: #86b9e3;
-
-	/* Ellipse 9 */
-
-	position: absolute;
-	width: 25px;
-	height: 25px;
-
-	background: #86b9e3;
-
-	/* Ellipse 8 */
-
-	position: absolute;
-	width: 25px;
-	height: 25px;
-
-	background: #86b9e3;
-
-	/* Ellipse 7 */
-
-	position: absolute;
-	width: 25px;
-	height: 25px;
-
-	background: #86b9e3;
-
-	/* Ellipse 6 */
-
-	position: absolute;
-	width: 25px;
-	height: 25px;
-
-	background: #86b9e3;
-
-	/* Ellipse 5 */
-
-	position: absolute;
-	width: 25px;
-	height: 25px;
-
-	background: #86b9e3;
-
-	/* Ellipse 4 */
-
-	position: absolute;
-	width: 25px;
-	height: 25px;
-
-	background: #86b9e3;
-
-	/* Ellipse 3 */
-
-	position: absolute;
-	width: 25px;
-	height: 25px;
-
-	background: #86b9e3;
-
-	/* Ellipse 2 */
-
-	position: absolute;
-	width: 25px;
-	height: 25px;
-
-	background: #86b9e3;
-
-	/* Polygon 1 */
-
-	position: absolute;
-	width: 70px;
-	height: 40px;
-
-	background: #dcd16a;
-	transform: rotate(-44deg);
-
-	/* Polygon 2 */
-
-	position: absolute;
-	width: 70px;
-	height: 40px;
-
-	background: #dcd16a;
-	transform: rotate(144deg);
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 30px solid var(--thunder-color1);
+	transform: rotate(20deg);
+	right: 5%;
+	top: 40%;
 }
 
-.cloudsAndSnow {
-	/* Rectangle 1 */
-
-	position: absolute;
-	width: 250px;
-	height: 100px;
-
-	background: #de838f;
-	border-radius: 50px;
-
-	/* Rectangle 2 */
-
-	position: absolute;
-	width: 250px;
-	height: 100px;
-
-	background: #87bed1;
-	border-radius: 50px;
-
-	/* Polygon 29 */
-
+.snow1 {
 	position: absolute;
 	width: 22.98px;
 	height: 45.73px;
 
 	background: #97bbf1;
 	transform: matrix(0.13, 0.99, -0.99, 0.12, 0, 0);
-
-	/* Polygon 30 */
-
+}
+.snowIcon {
 	position: absolute;
-	width: 22.99px;
-	height: 45.7px;
-
-	background: #97bbf1;
-	transform: matrix(0.79, 0.61, -0.61, 0.79, 0, 0);
-
-	/* Polygon 31 */
-
-	position: absolute;
-	width: 22.92px;
-	height: 45.84px;
-
-	background: #97bbf1;
-	transform: matrix(-0.13, 0.99, -0.99, -0.14, 0, 0);
-
-	/* Polygon 32 */
-
-	position: absolute;
-	width: 22.89px;
-	height: 45.91px;
-
-	background: #97bbf1;
-	transform: matrix(-1, 0.03, -0.04, -1, 0, 0);
-
-	/* Polygon 33 */
-
-	position: absolute;
-	width: 22.85px;
-	height: 45.98px;
-
-	background: #97bbf1;
-	transform: matrix(-0.84, 0.54, -0.54, -0.84, 0, 0);
-
-	/* Polygon 34 */
-
-	position: absolute;
-	width: 22.98px;
-	height: 45.73px;
-
-	background: #97bbf1;
-	transform: matrix(0.13, 0.99, -0.99, 0.12, 0, 0);
-
-	/* Polygon 35 */
-
-	position: absolute;
-	width: 22.99px;
-	height: 45.7px;
-
-	background: #97bbf1;
-	transform: matrix(0.79, 0.61, -0.61, 0.79, 0, 0);
-
-	/* Polygon 36 */
-
-	position: absolute;
-	width: 22.92px;
-	height: 45.84px;
-
-	background: #97bbf1;
-	transform: matrix(-0.13, 0.99, -0.99, -0.14, 0, 0);
-
-	/* Polygon 37 */
-
-	position: absolute;
-	width: 22.89px;
-	height: 45.91px;
-
-	background: #97bbf1;
-	transform: matrix(-1, 0.03, -0.04, -1, 0, 0);
-
-	/* Polygon 38 */
-
-	position: absolute;
-	width: 22.85px;
-	height: 45.98px;
-
-	background: #97bbf1;
-	transform: matrix(-0.84, 0.54, -0.54, -0.84, 0, 0);
-
-	/* Polygon 39 */
-
-	position: absolute;
-	width: 22.98px;
-	height: 45.73px;
-
-	background: #97bbf1;
-	transform: matrix(0.13, 0.99, -0.99, 0.12, 0, 0);
-
-	/* Polygon 40 */
-
-	position: absolute;
-	width: 22.99px;
-	height: 45.7px;
-
-	background: #97bbf1;
-	transform: matrix(0.79, 0.61, -0.61, 0.79, 0, 0);
-
-	/* Polygon 41 */
-
-	position: absolute;
-	width: 22.92px;
-	height: 45.84px;
-
-	background: #97bbf1;
-	transform: matrix(-0.13, 0.99, -0.99, -0.14, 0, 0);
-
-	/* Polygon 42 */
-
-	position: absolute;
-	width: 22.89px;
-	height: 45.91px;
-
-	background: #97bbf1;
-	transform: matrix(-1, 0.03, -0.04, -1, 0, 0);
-
-	/* Polygon 43 */
-
-	position: absolute;
-	width: 22.85px;
-	height: 45.98px;
-
-	background: #97bbf1;
-	transform: matrix(-0.84, 0.54, -0.54, -0.84, 0, 0);
+	right: 35%;
 }
