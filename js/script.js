@@ -9,7 +9,22 @@ const weatherInfo = document.querySelector('.weatherInfo');
 const townInfo = document.querySelector('.town');
 const dateTimeInfo = document.querySelector('.time');
 const weatherIcon = document.querySelector('.weatherIcon');
-const snowIncon = document.querySelector('.snowIcon');
+const funFactContainer = document.querySelector('.funFact');
+const degreeDisplay = document.querySelector('.degree');
+const degNumber = document.querySelector('.degNumber');
+const degPointer = document.querySelector('.degPointer');
+
+// random Joke api
+
+const getRandomJoke = async () => {
+  try {
+    const jokePromise = await fetch('https://ffa.aakhilv.me/json');
+    const joke = await jokePromise.json();
+    funFactContainer.innerText = joke.text;
+  } catch (err) {
+    console.error(err);
+  }
+};
 
 // time offset function
 const offsetDate = (offset) => {
@@ -23,12 +38,43 @@ const offsetDate = (offset) => {
   return { weekday: day, hours: hrs, minutes: mins };
 };
 
+const displayDegreeRang = (deg) => {
+  let x = (deg * 300) / 40;
+  degreeDisplay.style.transform = `translateX(${x}%)`;
+  // background change
+  let bgColor = '';
+  if (deg >= -40 && deg <= -20) bgColor = 'var(--degree--40--20)';
+  if (deg >= -20 && deg <= 0) bgColor = 'var(--degree--20-0)';
+  if (deg > 0 && deg <= 20) bgColor = 'var(--degree-0-20)';
+  if (deg > 20 && deg <= 40) bgColor = 'var(--degree-20-40)';
+  degNumber.innerHTML = `${deg}&deg;`;
+  degNumber.style.color = bgColor;
+  degPointer.style.backgroundColor = bgColor;
+};
+const updateIcon = (main) => {
+  const weather = main.toLowerCase();
+  console.log(weather);
+  if (weather === 'clouds') return createClouds();
+  if (weather === 'snow') return createCloudsAndSnow();
+  if (weather === 'rain') return createCloudsAndRain();
+  if (weather === 'drizzle') return createCloudsAndRain();
+  if (weather === 'thunderstorm') return createCloudsRainAndThunder();
+  if (weather === 'clear') return createSun();
+  createClouds();
+};
+
 // rendering html
 const updateHtml = (apiData, dateObj) => {
+  console.log(apiData);
   const weather = apiData.weather[0].description;
+  const main = apiData.weather[0].main;
   const city = apiData.name;
-  // icon
-  const iconUrl = `http://openweathermap.org/img/wn/${apiData.weather[0].icon}.png`;
+  const deg = Math.floor(apiData.main.temp);
+  // display degree
+  displayDegreeRang(deg);
+
+  // icon logic
+  updateIcon(main);
 
   // updating UI
   weatherInfo.innerHTML = `${
@@ -37,7 +83,7 @@ const updateHtml = (apiData, dateObj) => {
           .split(' ')
           .map((el) => el.charAt(0).toUpperCase() + el.slice(1))
           .join(' <br /> ')
-      : weather.charAt(0).toUpperCase() + el.slice(1)
+      : weather.charAt(0).toUpperCase() + weather.slice(1)
   }`;
   townInfo.innerHTML = `${city}`;
   dateTimeInfo.innerHTML =
@@ -45,11 +91,10 @@ const updateHtml = (apiData, dateObj) => {
     `${+dateObj.hours}`.padStart(2, 0) +
     ' : ' +
     `${+dateObj.minutes}`.padStart(2, 0);
-  weatherIcon.style.backgroundImage = `url('${iconUrl}')`;
+  getRandomJoke();
 };
 
 const clearIconField = () => {
-  snowIncon.classList.add('displayNone');
   weatherIcon.innerHTML = '';
 };
 
@@ -74,9 +119,9 @@ const getWeatherData = async (apiKey, cityName) => {
     if (!weatherPromise.ok)
       throw new Error('Bad URL, please type again ❌❌❌');
     const weatherData = await weatherPromise.json();
-    console.log(weatherData);
+
     const dateObj = offsetDate(weatherData.timezone);
-    console.log(dateObj);
+
     updateHtml(weatherData, dateObj);
     return weatherData;
   } catch (error) {
@@ -141,7 +186,7 @@ const createCloudsAndRain = () => {
 };
 // createCloudsAndRain();
 
-const cloudsRainAndThunder = () => {
+const createCloudsRainAndThunder = () => {
   clearIconField();
 
   const div2 = document.createElement('div');
@@ -165,7 +210,7 @@ const cloudsRainAndThunder = () => {
 
 // cloudsRainAndThunder();
 
-const cloudsAndSnow = () => {
+const createCloudsAndSnow = () => {
   clearIconField();
   const div2 = document.createElement('div');
   div2.classList.add('cloudLeft');
@@ -173,9 +218,86 @@ const cloudsAndSnow = () => {
   const div3 = document.createElement('div');
   div3.classList.add('cloudRight');
   weatherIcon.appendChild(div3);
-  snowIncon.classList.remove('displayNone');
+
+  const div4 = document.createElement('div');
+  div4.classList.add('snowIcon');
+  div4.innerHTML = `
+  
+  
+					<svg
+						width="258"
+						height="209"
+						viewBox="0 0 258 209"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M45.8928 44.2449L24.7244 58.4808L0.518657 49.9421L21.6871 35.7062L45.8928 44.2449Z"
+							fill="#97BBF1"
+						/>
+						<path
+							d="M81.4501 1.75966L76.7187 26.9347L53.75 38.1141L58.4814 12.9391L81.4501 1.75966Z"
+							fill="#97BBF1"
+						/>
+						<path
+							d="M97.5124 50.5014L73.3203 58.7246L52.1034 44.221L76.2955 35.9978L97.5124 50.5014Z"
+							fill="#97BBF1"
+						/>
+						<path
+							d="M51.2936 93.6016L38.8782 71.0654L49.3349 47.7323L61.7503 70.2685L51.2936 93.6016Z"
+							fill="#97BBF1"
+						/>
+						<path
+							d="M47.7379 38.8229L25.6707 25.6837L22.8226 0.181497L44.8899 13.3207L47.7379 38.8229Z"
+							fill="#97BBF1"
+						/>
+						<path
+							d="M97.8928 159.245L76.7244 173.481L52.5187 164.942L73.6871 150.706L97.8928 159.245Z"
+							fill="#97BBF1"
+						/>
+						<path
+							d="M133.45 116.76L128.719 141.935L105.75 153.114L110.481 127.939L133.45 116.76Z"
+							fill="#97BBF1"
+						/>
+						<path
+							d="M149.512 165.501L125.32 173.725L104.103 159.221L128.296 150.998L149.512 165.501Z"
+							fill="#97BBF1"
+						/>
+						<path
+							d="M103.294 208.602L90.8782 186.065L101.335 162.732L113.75 185.269L103.294 208.602Z"
+							fill="#97BBF1"
+						/>
+						<path
+							d="M99.7379 153.823L77.6707 140.684L74.8226 115.181L96.8899 128.321L99.7379 153.823Z"
+							fill="#97BBF1"
+						/>
+						<path
+							d="M205.893 82.2449L184.724 96.4808L160.519 87.9421L181.687 73.7062L205.893 82.2449Z"
+							fill="#97BBF1"
+						/>
+						<path
+							d="M241.45 39.7597L236.719 64.9347L213.75 76.1141L218.481 50.9391L241.45 39.7597Z"
+							fill="#97BBF1"
+						/>
+						<path
+							d="M257.512 88.5014L233.32 96.7246L212.103 82.221L236.296 73.9978L257.512 88.5014Z"
+							fill="#97BBF1"
+						/>
+						<path
+							d="M211.294 131.602L198.878 109.065L209.335 85.7323L221.75 108.269L211.294 131.602Z"
+							fill="#97BBF1"
+						/>
+						<path
+							d="M207.738 76.8229L185.671 63.6837L182.823 38.1815L204.89 51.3207L207.738 76.8229Z"
+							fill="#97BBF1"
+						/>
+					</svg>
+				
+  
+  `;
+  weatherIcon.appendChild(div4);
 };
 
-cloudsAndSnow();
+// cloudsAndSnow();
 
 // TODO Implement degrees range, create css or svg icons

@@ -17,6 +17,10 @@
 	--cloud-left1: rgb(223, 131, 142, 0.8);
 	--cloud-right1: rgb(135, 190, 209, 0.8);
 	--thunder-color1: rgb(218, 208, 115, 1);
+	--degree--40--20: rgb(99, 92, 214);
+	--degree--20-0: rgb(182, 154, 218);
+	--degree-0-20: rgb(206, 127, 128);
+	--degree-20-40: rgb(230, 98, 36);
 }
 
 html,
@@ -45,6 +49,7 @@ body {
 .main {
 	padding: 1rem;
 	position: relative;
+	transition: all ease 0.3s;
 }
 nav {
 	/* border: 1px solid white; */
@@ -181,12 +186,93 @@ nav {
 	font-size: 1rem;
 	z-index: 10;
 }
+.factContainer {
+	position: absolute;
+	bottom: 1%;
+}
+.funFact {
+	color: white;
+	font-weight: bold;
+	font-style: italic;
+	background-color: rgb(135, 190, 209, 0.5);
+	padding: 0.2rem;
+}
+h3 {
+	color: var(--burger-color1);
+}
 footer {
 	background-color: rgb(255, 255, 255);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
+.rangeContainer {
+	position: relative;
+}
+
+.low {
+	color: rgb(74, 72, 212);
+	width: 1rem;
+	height: 1rem;
+	font-size: 1.3rem;
+	/* font-style: italic; */
+	font-weight: bold;
+}
+
+.high {
+	color: rgb(231, 98, 34);
+	width: 1rem;
+	height: 1rem;
+	float: right;
+	margin-right: 0.5rem;
+	font-size: 1.3rem;
+	/* font-style: italic; */
+	font-weight: bold;
+}
+
+.range {
+	position: relative;
+	margin-top: 0.2rem;
+	width: 20rem;
+	height: 1rem;
+	background: rgb(71, 63, 217);
+	background: linear-gradient(
+		90deg,
+		rgba(71, 63, 217, 1) 0%,
+		rgba(187, 152, 224, 1) 50%,
+		rgba(255, 80, 0, 1) 100%
+	);
+	border-radius: 1rem;
+}
+.degNumber {
+	/* border: 1px solid black; */
+	width: 3rem;
+	height: 3rem;
+	color: black;
+	font-size: 2.8rem;
+	font-style: italic;
+	font-weight: bold;
+	text-align: center;
+	padding: 0;
+}
+.degPointer {
+	width: 0.3rem;
+	height: 1.8rem;
+	background-color: black;
+	border-radius: 1rem;
+}
+.degree {
+	transition: all ease 0.3s;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	bottom: 20%;
+	right: 40%;
+	/* transform: translateX(-150%); */
+}
+
 @media only screen and (min-width: 600px) {
 	.container {
 		width: 500px;
@@ -362,5 +448,6 @@ footer {
 }
 .snowIcon {
 	position: absolute;
-	right: 35%;
+	bottom: -50%;
+	left: -10%;
 }
